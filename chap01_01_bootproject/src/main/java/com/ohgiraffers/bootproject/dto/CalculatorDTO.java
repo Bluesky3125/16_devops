@@ -18,4 +18,9 @@ public class CalculatorDTO {
 	@NonNull
 	private int num2;
 	private int sum;
+	
+	public CalculatorDTO(int num1, int num2) {
+		this.num1 = num1;
+		this.num2 = num2;
+	}
 }
