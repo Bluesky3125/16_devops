@@ -4,23 +4,20 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@RequiredArgsConstructor
 @Getter
 @Setter
 @ToString
 public class CalculatorDTO {
 	@NonNull
-	private int num1;
+	private Integer num1;
 	@NonNull
-	private int num2;
+	private Integer num2;
 	private int sum;
-	
-	public CalculatorDTO(int num1, int num2) {
-		this.num1 = num1;
-		this.num2 = num2;
-	}
 }
