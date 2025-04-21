@@ -1,4 +1,8 @@
 FROM node:lts-alpine
+
+## curl(client url) 설치
+RUN apk add --no-cache curl
+
 WORKDIR /app
 COPY . .
 RUN npm install
