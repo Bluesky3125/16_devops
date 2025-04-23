@@ -43,7 +43,16 @@
         // });
 
         // 4. 백엔드에서 X, 프론트에서 CORS(docker-compose를 활용해 네트워크로 통신, 둘 다 컨테이너)
-        const response = await fetch(`http://localhost:8011/api/plus`, {
+        // const response = await fetch(`http://localhost:8011/api/plus`, {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json;charset=utf-8;'
+        //     },
+        //     body: JSON.stringify({num1: num1.value, num2: num2.value})
+        // });
+
+        // 5. 백엔드에서 cors, 프론트에서 X(kubernetes의 백엔트 워커노드로 요청)
+        const response = await fetch(`http://localhost:30001/plus`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8;'
